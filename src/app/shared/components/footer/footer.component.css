@@ -1,0 +1,104 @@
+.all-container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.contact{
+    width: 100%;
+    padding: 20px 15px 20px 10px;
+    box-sizing: border-box;
+    background-color: #373737;
+    border-bottom: 1px rgba(200, 200, 200, .1) solid;
+}
+.contact h4{
+    color: white;
+    font-weight: 300;
+    font-size: 1.4375rem;
+    text-align: center;
+    line-height: 1.4375rem;
+    margin: 15px 0px;
+}
+.contact-dates{
+    width: 100%;
+    color: white;
+}
+.contact-dates > div {
+    display: flex;
+    align-items: center;
+}
+.contact-dates > div > mat-icon{
+    color: rgb(223, 230, 177);
+}
+.contact-dates > div > span{
+    font-size: 12px;
+    padding-left: 6px;
+}
+.line{
+    width: 100%;
+    display: block;
+    border-top:1px solid #7fcbff;
+}
+footer{
+    width: 100%;
+    background-color: #373737;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+}
+.camex-footer{
+    width: 100%;
+}
+.camex-footer h4{
+    color: #c6c6c6;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600;
+    letter-spacing: .8px;
+    margin-bottom: 10px;
+    margin-top: 8px;
+}
+.camex-footer a{
+    text-decoration: none;
+    font-size: 12px;
+    color: #9f9f9f;
+}
+.camex-footer ul {
+    list-style: none;
+}
+.camex-footer li{
+    padding: 5px 2px;
+    box-sizing: border-box;
+}
+.social{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../../../assets/images/social/social-icons.png);
+    background-size: 72px 18px;
+    position: relative;
+    top:4px;
+}
+.facebook{
+    background-position-x: 0px;
+}
+.youtube{
+    background-position-x: -36px;
+}
+.whatsapp{
+    background-position-x: -18px;
+}
+.twitter {
+    background-position-x: -54px;
+}
+.yoteapoyo-footer{
+    width: 100%;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border-top: 1px rgba(200, 200, 200, .1) solid;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #373737;
+}
+.yoteapoyo-footer > small {
+    font-size: 12px;
+    color: #515151;
+}

@@ -1,0 +1,59 @@
+.item{
+    padding-bottom: 30px;
+}
+.courses-container{
+    width: 100%;
+    padding: 20px 10px 30px 10px;
+    box-sizing: border-box;
+    /*Give padding for lt-sm*/
+    text-align: center;
+    background-color: white;
+}
+.vertical-options{
+    width: 80px;
+    height: 100%;
+}
+.courses-section {
+    width: 100%;
+    display: inline-flex;
+}
+.cards-container{
+    width: calc( 100% - 80px);
+}
+/*ver mas boton*/
+.see-more{
+    color: #83ba3b;
+    width: 55px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 85px 0 50px 20px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .3s;
+    border:solid 2px #83ba3b;
+}
+.see-more:hover{
+    background-color: #83ba3b;
+    color: antiquewhite;
+}
+.see-more mat-icon{
+    font-size: 35px;
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+.see-more p{
+    margin-top: 1px;
+    font-size: 10px;
+}
+
+.title{
+    font-size: 1.4rem;
+    color: #313131;
+    font-weight: 700;
+    line-height: 3.625rem;
+    height: 3.625rem;
+    letter-spacing: -1px;
+}

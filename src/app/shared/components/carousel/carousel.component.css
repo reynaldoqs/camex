@@ -1,0 +1,75 @@
+
+:host{
+    width: 100%;
+    display: block;
+}
+section{
+    text-align: center;
+    padding: 140px 10px 100px 10px;
+}
+h1{
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: -1px;
+    color: white;
+}
+h2{
+    font-size: 37px;
+    line-height: 32px;
+    color: white;
+    font-weight: 600;
+    max-width: 670px;
+    margin: 10px auto 14px auto;
+}
+p{
+    color: #f1f1f1;
+    max-width: 420px;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 16px;
+}
+button{
+    margin: 20px 10px;
+    background-color: #83ba3b;
+}
+a{
+    margin: 20px 10px;
+    font-weight: 500;
+}
+/*
+.container{
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 35px;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    min-width: 100%;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+.item > h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.3rem; 
+}
+.item > button {
+    border: 2px solid white;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    margin: 20px 0 5px 0;
+    cursor: pointer;
+}
+.item > button:hover{
+    color: #313131;
+    background-color: white;
+}
+.item > button:focus{
+    outline: none;
+}*/

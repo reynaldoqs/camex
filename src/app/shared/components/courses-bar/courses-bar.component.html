@@ -1,0 +1,20 @@
+<section class="courser-container">
+    <h3 class="title">Cursos de capacitación</h3>
+  <div class="courses-section">
+      <div class="cards-container" [ngStyle.lt-md]="{'width':'100%'}">
+        <div *ngIf="vision">
+            <owl-carousel [options]="configuration" [items]="courses" [carouselClasses]="['owl-theme', 'row', 'sliding']" #owl>
+                <div class="item" *ngFor="let course of courses; let i=index" (click)="openDialog(course)">
+                    <camex-course-card [course]="course"></camex-course-card>
+                </div>
+            </owl-carousel>
+        </div>
+      </div>
+      <div  *ngIf="vision" class="vertical-options no-select" fxHide [fxHide.gt-sm]="false">
+          <div class="see-more" (click)="next()" *ngIf="courses.length > 3">
+              <mat-icon>fast_forward</mat-icon>
+              <p>Ver mas</p>
+          </div>
+      </div>
+  </div>
+</section>

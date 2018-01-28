@@ -1,0 +1,32 @@
+mat-sidenav-content{
+  padding-top: 64px;
+}
+camex-tool-bar{
+  position: fixed;
+  top:0px;
+}
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  ul{
+      list-style: none;
+  }
+  .title{
+      font-weight: 500;
+    color: #83ba3b;
+    font-size: 16px;
+    margin: 20px 30px 10px 10px;
+  }
+  .item{
+    margin: 10px 30px 10px 20px;      
+  }
+  .item > a{
+      text-decoration: none;
+      font-weight: 300;
+      color: #454545;
+      font-size: 15px;
+  }

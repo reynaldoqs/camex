@@ -1,0 +1,50 @@
+<section>
+  <div class="close" (click)="onNoClick()">
+    <mat-icon>close</mat-icon>
+  </div>
+  <div class="img" [style.background-image]="'url(' + data.url + ')'" [ngStyle.lt-sm]="{'height':'200px'}"></div>
+  <div class="container" [ngStyle.lt-sm]="{'padding':'10px'}">
+    <div class="header" fxLayout="row" fxLayout.lt-sm="column">
+      <div class="left" [ngStyle.lt-sm]="{'width':'100%'}" fxLayout="column">
+        <h2>{{data.titulo}}</h2>
+
+        <div class="chip">
+          <div class="icon">
+            <mat-icon>perm_contact_calendar</mat-icon>
+          </div>
+          <div class="chip-container">
+            <h3>Fechas:</h3>
+            <span *ngFor="let fecha of data.fechas" class="fechas">{{fecha | date: 'dd/MM/yy'}}</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="icon">
+            <mat-icon>monetization_on</mat-icon>
+          </div>
+          <div class="chip-container">
+            <h3>Inversión:</h3>
+            <span>{{data.costo}} Bs</span>
+          </div>
+        </div>
+
+        <div class="chip">
+          <div class="icon">
+            <mat-icon>watch_later</mat-icon>
+          </div>
+          <div class="chip-container">
+            <h3>Duración:</h3>
+            <span>Inicio {{data.fechas[0] | date: 'HH:MM'}} - {{data.duracion_sesion}}</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="right">
+        <button (click)="navigate(data.id)">Reservar un cupo</button>
+      </div>
+    </div>
+    <p>
+      {{data.descripcion}}
+    </p>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+<mat-toolbar role="header" [ngStyle.lt-md]="{padding:'0px  10px'}">
+  <span>
+    <a href="/home" class="camex-logo">
+      <img src="../../../../assets/images/camex_logo.png" alt="Camara de Exportadores" [ngStyle.lt-md]="{'height':'35px', 'width':'122px'}">
+    </a>
+  </span>
+  <span class="v-line"></span>
+  <span>
+    <a href="#" class="revista-logo">
+      <img src="../../../../assets/images/revista_logo.png" alt="Revista Negocios y exportaciones" [ngStyle.lt-md]="{'height':'32px', 'width':'40px'}">
+    </a>
+  </span>
+  <span class="spacer"></span>
+  <nav fxHide.lt-md>
+    <ul>
+      <li (click)="navigate('home')">
+        <a >
+          Inicio
+        </a>
+      </li>
+      <li [matMenuTriggerFor]="institucional">
+        <a>Institucional
+          <mat-icon class="serv-icon">arrow_drop_down</mat-icon>
+        </a>
+      </li>
+      <li (click)="navigate('services')">
+        <a>
+          Servicios
+        </a>
+      </li>
+      <li [matMenuTriggerFor]="informacion">
+        <a>Información
+          <mat-icon class="serv-icon">arrow_drop_down</mat-icon>
+        </a>
+      </li>
+      <li>
+        <a>
+          Exportando
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="sandwich-menu" fxHide.gt-sm>
+    <button mat-icon-button (click)="menuToggle()">
+      <mat-icon aria-label="Menu">menu</mat-icon>
+    </button>
+  </nav>
+  <!-- menu options-->
+
+  <mat-menu #institucional="matMenu" [overlapTrigger]="false">
+    <a (click)="navigate('about')" mat-menu-item class="my-item">¿Quienes somos?</a>
+    <a (click)="navigate('about')" mat-menu-item class="my-item">Misión</a>
+    <a (click)="navigate('about')" mat-menu-item class="my-item">Visión</a>
+  </mat-menu>
+
+  <mat-menu #informacion="matMenu" [overlapTrigger]="false" #inst>
+    <a href="#" mat-menu-item class="my-item">Guía Empresarial</a>
+    <a href="#" mat-menu-item class="my-item">Oferta Exportable</a>
+    <a href="#" mat-menu-item class="my-item">Cronograma</a>
+    <a href="#" mat-menu-item class="my-item">Noticias</a>
+  </mat-menu>
+
+  <!-- end menu options-->
+</mat-toolbar>

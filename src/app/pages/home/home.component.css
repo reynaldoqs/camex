@@ -1,0 +1,26 @@
+.header{
+    background-image: url(../../../assets/images/camex_bg.jpg);
+    background-size: cover;
+}
+camex-last-events{
+    max-width: 1300px;
+    display: block;
+    margin: 0px auto;
+}
+.last-events-container{
+    width: 100%;
+    background-color: rgba(250, 250, 250, .5);
+    padding: 5px 0px;
+    box-sizing: border-box;
+}
+camex-guia,.courses-container{
+    background-color: #eee;
+}
+camex-courses-bar, camex-events-bar{
+    max-width: 1300px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 10px;
+    box-sizing: border-box; 
+
+}

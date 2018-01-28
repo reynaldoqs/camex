@@ -4,5 +4,14 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyAlj25XhkrhHIu_IlUO3n2iwzttALbOD5U',
+    authDomain: 'camex-web.firebaseapp.com',
+    databaseURL: 'https://camex-web.firebaseio.com',
+    projectId: 'camex-web',
+    storageBucket: 'camex-web.appspot.com',
+    messagingSenderId: '882993553217'
+  }
+
 };

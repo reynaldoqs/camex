@@ -1,0 +1,15 @@
+<section class="events-container" [ngStyle.gt-sm]="{'padding': '20px 30px 20px 30px'}">
+  <div class="all-container">
+      <div class="title-container">
+          <h2>Noticias</h2>
+          <div class="see-more-events">
+              <span>Ver mas</span>
+          </div>
+      </div>
+      <owl-carousel [options]="configuration" [items]="events" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item" *ngFor="let event of events;let i = index">
+              <camex-news-card [event]="event"></camex-news-card>
+          </div>
+      </owl-carousel>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<mat-sidenav-container
+    class="example-container" (backdropClick)="sidenav.close()">
+  <mat-sidenav #sidenav (keydown.escape)="sidenav.close()" disableClose>
+      <ul>
+          <li class="title">¿Quienes somos?</li>
+          <li class="item"><a href="">Misión</a></li>
+          <li class="item"><a href="">Visión</a></li>
+      </ul>
+      <ul>
+            <li class="title">Información</li>
+            <li class="item"><a href="">Guia Empresarial</a></li>
+            <li class="item"><a href="">Oferta exportable</a></li>
+            <li class="item"><a href="">Cronograma</a></li>
+            <li class="item"><a href="">Noticias</a></li>
+
+        </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle.lt-md]="{'padding-top':'54px'}">
+    <camex-tool-bar (smenu)="sidenav.open()"></camex-tool-bar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

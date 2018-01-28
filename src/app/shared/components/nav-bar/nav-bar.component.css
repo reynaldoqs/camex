@@ -1,0 +1,43 @@
+:host{
+    display: block;
+    width: 100%;
+    z-index: 998;
+    background-color: #83ba3b;
+
+  }
+    .mat-toolbar{
+      height: 42px;
+      background-color:transparent;
+      padding: 0 45px;
+      box-sizing: border-box;
+    }
+    ul{
+        list-style: none;
+        display: inline-flex;
+    }
+    li{
+        height: 42px;
+        padding: 3px 20px 5px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: .3s;
+    }
+    li:hover{
+        background-color: rgba(0, 0, 0, .1);
+    }
+    li a{
+        text-decoration: none;
+        color: #fff;
+      font-size: 14px;
+      font-weight: 300;   
+    }
+     a > mat-icon{
+        font-size: 15px;
+        position: relative;
+        top: 2px;
+        left: 8px;
+    }
+    mat-toolbar{
+        display: flex;
+        justify-content: center;
+    }

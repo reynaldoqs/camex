@@ -1,0 +1,25 @@
+section{
+    background-color: #eee;
+
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main-container,.nav-container{
+    padding: 30px;
+    box-sizing: border-box;
+}
+.nav-container{
+    width: 320px;
+}
+.main-container{
+    width: calc(100% - 320px);
+
+}
+.information, .nav-information{
+    width: 100%;
+    background-color: white;
+}

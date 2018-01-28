@@ -1,0 +1,27 @@
+:host{
+text-align: center;
+width: 100%;
+display: block;
+padding: 10px;
+box-sizing: border-box;
+}
+
+p{
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+h3{
+    color: #454545;
+    font-weight: 700;
+    font-size: 37px;
+    margin: 30px 0px 20px 0px;
+}
+button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    background-color: #83ba3b;
+}

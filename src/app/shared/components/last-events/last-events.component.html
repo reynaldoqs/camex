@@ -1,0 +1,25 @@
+
+<section *ngFor="let event of events | async">
+  <div class="line-container" fxHide.lt-sm>
+    <div class="line">
+      <div class="circle"></div>
+    </div>
+  </div>
+  <div class="container" [ngStyle.lt-sm]="{'width':'100%'}">
+    <div class="event-card">
+      <div class="left">
+        <h4>{{event.fecha_inicio | date:'dd'}}</h4>
+        <span>{{event.fecha_inicio | date:'MMMM'}}</span>
+      </div>
+      <div class="mid">
+        <h3>{{event.titulo}}</h3>
+        <p>{{event.descripcion}}</p>
+      </div>
+      <div class="right">
+        <button mat-mini-fab>
+          <mat-icon aria-label="Ver detalles del evento">arrow_forward</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
