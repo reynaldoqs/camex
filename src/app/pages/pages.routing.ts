@@ -7,6 +7,7 @@ import { PagesComponent } from './pages.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
+import { GuiaEmpresarialComponent } from './guia-empresarial/guia-empresarial.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent},
       { path: 'services', component: ServicesComponent},
+      { path: 'guia-empresarial', component: GuiaEmpresarialComponent},
       { path: 'cursos/:id', component: CourseDetailComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full' }
     ]

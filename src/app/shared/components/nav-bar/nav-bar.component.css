@@ -3,7 +3,7 @@
     width: 100%;
     z-index: 998;
     background-color: #83ba3b;
-
+    background: linear-gradient(45deg,#00ae7b,#0081bf);
   }
     .mat-toolbar{
       height: 42px;

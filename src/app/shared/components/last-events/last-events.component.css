@@ -72,9 +72,7 @@ section:last-child .line-container{
     justify-content: center;
     align-items: center;
 }
-.right button{
-    background-color: #8BC34A;
-}
+
 .left h4{
     font-size: 32px;
     font-weight: 900;
@@ -100,6 +98,15 @@ section:last-child .line-container{
     text-overflow: ellipsis;
     white-space: nowrap; 
     margin-bottom: 4px;
+}
+.mid h3 > span{
+    font-size: 13px;
+    color: #2196F3;
+    font-weight: 300;
+
+    font-style: italic;
+    position: relative;
+    top:-2px;
 }
 .mid p{
     font-size: 14px;

@@ -52,3 +52,6 @@ button.my-button, a.my-button{
 .cdk-overlay-panel{
     max-width: 100vw!important;
 }
+a:focus{
+    outline: none;
+}

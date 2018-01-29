@@ -24,7 +24,7 @@
           </div>
           <div class="chip-container">
             <h3>Inversión:</h3>
-            <span>{{data.costo}} Bs</span>
+            <span>Costo - {{data.inversion}} Bs</span>
           </div>
         </div>
 
@@ -34,13 +34,17 @@
           </div>
           <div class="chip-container">
             <h3>Duración:</h3>
-            <span>Inicio {{data.fechas[0] | date: 'HH:MM'}} - {{data.duracion_sesion}}</span>
+            <span>Inicio: {{data.fechas[0] | date: 'HH:MM'}}, duracion: {{data.duracion_sesion}}</span>
           </div>
         </div>
 
       </div>
       <div class="right">
-        <button (click)="navigate(data.id)">Reservar un cupo</button>
+        <button *ngIf="today < data.ultimo_registro" (click)="navigate(data.id)">Reservar un cupo</button>
+        <ng-container *ngIf="today > data.ultimo_registro">
+            <div class="alert no-select"><mat-icon>error</mat-icon> Este curso ya expiró</div>
+            <div class="reservar" (click)="navigate(data.id)">Realizar una reserva para futuras ediciones</div>
+        </ng-container>
       </div>
     </div>
     <p>

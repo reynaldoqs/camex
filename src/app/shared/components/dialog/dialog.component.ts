@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-
+  today = new Date();
   constructor(
     private _router: Router,
     public dialogRef: MatDialogRef<DialogComponent>,

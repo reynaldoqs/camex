@@ -4,11 +4,12 @@
     <div class="card-title">
         <h3>{{course.titulo}}</h3>
     </div>
-    <p>
+    <div class="card-date">
       <span>
         <mat-icon class="date">date_range</mat-icon>
       </span>
-      <span class="date">{{course.id}}</span>
-    </p>
+      <span class="date">{{course.fechas[0] | date:'dd/MM/yyyy HH:MM'}}</span>
+      <span class="tipo">{{course.tipo}}</span>
+    </div>
   </div>
 </div>

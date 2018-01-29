@@ -12,6 +12,8 @@ import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { AngularMaterialModule } from '../angular.material.module';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { GuiaEmpresarialComponent } from './guia-empresarial/guia-empresarial.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { AngularMaterialModule } from '../angular.material.module';
     PagesRoutingModule,
     SharedModule,
     FlexLayoutModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     PagesComponent,
@@ -28,7 +32,8 @@ import { AngularMaterialModule } from '../angular.material.module';
     CoursesComponent,
     CourseDetailComponent,
     ServicesComponent,
-    AboutComponent
+    AboutComponent,
+    GuiaEmpresarialComponent
   ]
 })
 export class PagesModule { }

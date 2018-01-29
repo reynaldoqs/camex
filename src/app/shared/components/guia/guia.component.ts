@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'camex-guia',
@@ -7,15 +8,17 @@ import { Component, OnInit } from '@angular/core';
     <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, animi excepturi at officia nemo nisi quas aut quasi odio.
     </p>
-    <button class="my-button" mat-raised-button>Consultar guia empresarial</button>
+    <button class="my-button" mat-raised-button (click)="navigate()">Consultar guia empresarial</button>
   `,
   styleUrls: ['./guia.component.css']
 })
 export class GuiaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
-
+  navigate() {
+    this._router.navigate(['/guia-empresarial']);
+  }
 }

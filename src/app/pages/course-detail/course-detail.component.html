@@ -1,14 +1,64 @@
-<section>
+<section *ngIf="course | async; let _course">
   <div class="container" fxLayout="row" fxLayout.lt-sm="column">
-   <div class="main-container">
-     <div class="information">
-       A
-     </div>
-   </div>
-   <div class="nav-container">
-     <div class="nav-information">
-       B
-     </div>
-   </div>
+    <div class="main-container" [ngStyle.lt-sm]="{'width':'100%','padding':'0px'}">
+      <div class="information" [ngStyle.lt-sm]="{'padding':'10px'}">
+        <h2>Reserva</h2>
+        <h4>{{_course.titulo}}</h4>
+        <h5>{{_course.fechas[0] | date: 'fullDate'}}</h5>
+        <div class="form-container">
+          <form class="example-form">
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Nombre completo" [formControl]="nameFormControl" [(ngModel)]="reserva.nombre">
+              <mat-error *ngIf="nameFormControl.hasError('required')">
+                El nombre es
+                <strong>necesario</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Número de Teléfono" [formControl]="phoneFormControl" type="number" [(ngModel)]="reserva.telefono">
+              <mat-error *ngIf="(phoneFormControl.hasError('min') || phoneFormControl.hasError('max')) && !phoneFormControl.hasError('required')">
+                Número incorrecto - introduzca un número correcto.
+              </mat-error>
+              <mat-error *ngIf="phoneFormControl.hasError('required')">
+                El núnero de telefono es
+                <strong>necesario</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="reserva.correo">
+              <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Correo electrónico incorrecto
+              </mat-error>
+              <mat-error *ngIf="emailFormControl.hasError('required')">
+                El correo electrónico es
+                <strong>necesario</strong>
+              </mat-error>
+            </mat-form-field>
+
+          </form>
+        </div>
+
+        <button class="my-button" mat-raised-button [disabled]="(emailFormControl.hasError('email') || emailFormControl.hasError('required')
+                                                                 || phoneFormControl.hasError('min') || phoneFormControl.hasError('max') || phoneFormControl.hasError('required')
+                                                                  || nameFormControl.hasError('required') )" (click)="registrar()">Realizar reserva</button>
+
+        <!-- <a routerLink="/cursos">ver todos los cursos</a> -->
+      </div>
+    </div>
+    <div class="nav-container" [ngStyle.lt-sm]="{'width':'100%','padding':'0px'}">
+      <div class="nav-information" [ngStyle.lt-sm]="{'padding':'10px'}">
+        <div class="img" [style.background-image]="'url(' + _course.url + ')'"></div>
+        <h1>{{_course.titulo}}</h1>
+        <p>{{_course.descripcion}}</p>
+      </div>
+    </div>
   </div>
 </section>
+<!-- <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+<meta property="og:type"               content="article" />
+<meta property="og:title"              content="When Great Minds Don’t Think Alike" />
+<meta property="og:description"        content="How much does culture influence creative thinking?" />
+<meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" /> -->

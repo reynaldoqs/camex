@@ -8,8 +8,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="assets/images/camex_icon.png">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+  .camex-spinner{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.spinner-title{
+  color: #2196F3;
+  font-size: 18px;
+  line-height: 38px;
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+.spinner {
+    width: 101px;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    background-color: #ECEEE1;
+  }
+.bar{
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #9E9E9E;
+  position: relative;
+  animation: mov .8s linear infinite;
+}
+  @keyframes mov {
+   0%{
+    left: -80px;
+   }
+   100% {
+    left: 100px;
+   }
+  }
+  </style>
 </head>
 <body>
-  <camex-root></camex-root>
+
+  <camex-root>
+      <div class="camex-spinner">
+          <div class="spinner-container">
+            <span class="spinner-title">CAMEX</span>
+            <div class="spinner">
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+  </camex-root>
 </body>
 </html>
