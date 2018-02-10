@@ -14,15 +14,20 @@ camex-tool-bar{
   }
   ul{
       list-style: none;
+      width: 200px;
   }
   .title{
       font-weight: 500;
-    color: #83ba3b;
-    font-size: 16px;
-    margin: 20px 30px 10px 10px;
+      background-color: #0070ba;
+      color: #f1f1f1;
+      font-size: 16px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      margin-bottom: 3px;
   }
   .item{
-    margin: 10px 30px 10px 20px;      
+    padding: 7px 10px;
+    box-sizing: border-box; 
   }
   .item > a{
       text-decoration: none;

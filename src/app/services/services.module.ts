@@ -4,6 +4,9 @@ import { AngularFireModule } from 'angularfire2';
 import { environment } from '../../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { EventsService } from './events/events.service';
+import { NoticiasService } from './events/noticias.service';
+import { SponsorsService } from './events/sponsors.service';
+import { SeoService } from './seo.service';
 
 
 @NgModule({
@@ -14,6 +17,9 @@ import { EventsService } from './events/events.service';
         AngularFirestoreModule
     ],
     exports: [],
-    providers: [EventsService],
+    providers: [EventsService,
+            NoticiasService,
+            SponsorsService,
+            SeoService],
 })
 export class ServicesModule {}

@@ -1,48 +1,78 @@
 :host{
     width: 100%;
     display: flex;
+
+    padding-top: 20px;
+    padding-bottom: 30px;
 }
 .new-services{
-    width: auto;
-    padding: 10px;
-    box-sizing: border-box;
+    width: 100%;
+    display: inline-flex;
+    max-width: 1300px;
     margin: 0 auto;
 }
 .service-container{
-    display: inline-flex;
-    align-items: center;
-    margin-right: 30px;
-}
-.service-container:nth-child(1):hover h3{
-    color: #F44336;
-}
-.service-container:nth-child(2):hover h3{
-    color: #FFC107;
-}
-.service-container:nth-child(3):hover h3{
-    color: #8BC34A;
-    margin-right: 0px;
-}
-a > h3{
-    font-size: 1.375rem;
-    line-height: 4.625rem;
-    height: 4.625rem;
-    color: #666;
-    font-weight: 300;
-    padding-left: 10px;
+    width: 33.33333%;
     box-sizing: border-box;
-    transition: .3s;
+    text-align: center;
+    padding: 50px 10px 10px 10px;
 }
-a{
-    text-decoration: none;
-    cursor: pointer;
+.service-card{
+    border: solid 1px #fff;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 50px 25px 30px 25px;
+    border-radius: 6px;
+}
+.center{
+    background-color: #fff;
+}
+h3{
+    font-size: 1.6rem;
+    line-height: 3.625rem;
+    height: 3.625rem;
+    color: #fff;
+    font-weight: 600;
+margin-bottom: 10px;
+}
+h3.center {
+    color: #000;
+}
+p{
+    font-size: .91rem;
+    line-height: 1.2rem;
+    color: #eee;
+    font-weight: 300;
+}
+p.center{
+    color: #212121;
+}
+.ajuste{
+    margin-bottom: 19px;
 }
 img{
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: all .4s;
+    border-radius: 55px;
+    width: 110px;
+    height: 110px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.34);
+    position: relative;
+    top:-110px;
+    border: solid 2px #fff;
+    box-sizing: border-box;
 }
-.service-container:hover img{
-    -webkit-filter: none;
-    filter: none;
+
+.img-container{
+    position: absolute;
+}
+h3:after{
+    content: '';
+    display: block;
+    width: 20%;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #00ae7b;
+    margin: 0 auto;
+    position: relative;
+    top: -5px;
 }

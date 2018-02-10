@@ -2,10 +2,12 @@
   <div class="img" [style.background-image]="'url(' + event.imgUrl + ')'"></div>
   <div class="event-information">
     <div class="event-title">
-      <a href=""><h3>{{event.title}}</h3></a>
+      <h3>{{event.titulo}}</h3>
     </div>
+    <span>{{event.fecha | date:'fullDate'}}</span>
     <div class="event-description">
-      <p>{{event.description}}</p>
+      <p>{{event.descripcion}}</p>
     </div>
+    <a href="{{event.link}}">Ver más</a>
   </div>
 </div>

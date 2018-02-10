@@ -6,7 +6,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
-import { CoursesComponent } from './courses/courses.component';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
@@ -14,7 +13,11 @@ import { AngularMaterialModule } from '../angular.material.module';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { GuiaEmpresarialComponent } from './guia-empresarial/guia-empresarial.component';
+import { NoticiasComponent } from './noticias/noticias.component';
+import { SearchFilterPipe } from '../pipes/search.pipe';
+import { CronogramaComponent } from './cronograma/cronograma.component';
 
+// scroll
 
 @NgModule({
   imports: [
@@ -29,11 +32,13 @@ import { GuiaEmpresarialComponent } from './guia-empresarial/guia-empresarial.co
   declarations: [
     PagesComponent,
     HomeComponent,
-    CoursesComponent,
+    NoticiasComponent,
     CourseDetailComponent,
     ServicesComponent,
     AboutComponent,
-    GuiaEmpresarialComponent
+    GuiaEmpresarialComponent,
+    SearchFilterPipe,
+    CronogramaComponent
   ]
 })
 export class PagesModule { }

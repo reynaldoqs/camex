@@ -1,5 +1,12 @@
-<h3>Auspiciadores:</h3>
-<div class="sponsors-container">
-  <img src="../../../../assets/images/auspicios/viva.png" alt="">
-  <img src="../../../../assets/images/auspicios/viva.png" alt="">
-</div>
+<section class="sponsors-container" [ngStyle.gt-sm]="{'padding': '40px 30px 40px 30px'}" >
+  <div class="all-container" *ngIf="vision">
+    <owl-carousel [options]="configuration" [items]="sponsors" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+      <div class="item" *ngFor="let sponsor of sponsors;let i = index">
+        <img src="{{sponsor.imgUrl}}" alt="Auspiciador revista camex">
+        <!-- <h3>{{sponsor.nombre}}</h3> -->
+      </div>
+    </owl-carousel>
+  </div>
+  <mat-spinner *ngIf="!vision" style="margin:40px auto"></mat-spinner>
+</section>
+

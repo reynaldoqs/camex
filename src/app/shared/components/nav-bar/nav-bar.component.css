@@ -2,8 +2,9 @@
     display: block;
     width: 100%;
     z-index: 998;
-    background-color: #83ba3b;
-    background: linear-gradient(45deg,#00ae7b,#0081bf);
+    box-sizing: border-box;
+    background-color: #fff;
+
   }
     .mat-toolbar{
       height: 42px;
@@ -19,17 +20,21 @@
         height: 42px;
         padding: 3px 20px 5px 20px;
         box-sizing: border-box;
+        border-bottom: solid 0px black;
         cursor: pointer;
         transition: .3s;
     }
     li:hover{
-        background-color: rgba(0, 0, 0, .1);
+        border-bottom: solid 3px black;
+        box-sizing: border-box;
     }
+
     li a{
         text-decoration: none;
-        color: #fff;
-      font-size: 14px;
-      font-weight: 300;   
+        color: #343433;
+        font-weight: 300;
+        font-size: .92rem;
+        font-family: 'Lato', sans-serif; 
     }
      a > mat-icon{
         font-size: 15px;

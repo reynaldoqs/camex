@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
@@ -9,7 +9,7 @@ export class EventsService {
   constructor(private _db: AngularFirestore) { }
 
   getEvents(): Observable<any> {
-    return this._db.collection('eventos').snapshotChanges()
+    return this._db.collection('eventos', ref => ref.orderBy('ultimo_registro', 'desc')).snapshotChanges()
     .map(actions => {
       return actions.map( a => {
         const data = a.payload.doc.data();
@@ -33,9 +33,9 @@ export class EventsService {
     this.itemDoc = this._db.doc<any>(`eventos/${id}`);
     return this.itemDoc.valueChanges();
   }
-  addReserva(item: any) {
+  addReserva(item: any): Promise<any> {
     // ver como hacer un push en un elemento de una coleccion
-    const itemRservas: any = this.itemDoc.collection('reservas');
-    itemRservas.add(item);
+    const itemRservas: AngularFirestoreCollection<any> = this.itemDoc.collection('reservas');
+    return itemRservas.add(item);
   }
 }

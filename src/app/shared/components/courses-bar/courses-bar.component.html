@@ -1,20 +1,29 @@
-<section class="courser-container">
-    <h3 class="title">Cursos de capacitación</h3>
-  <div class="courses-section">
-      <div class="cards-container" [ngStyle.lt-md]="{'width':'100%'}">
-        <div *ngIf="vision">
-            <owl-carousel [options]="configuration" [items]="courses" [carouselClasses]="['owl-theme', 'row', 'sliding']" #owl>
-                <div class="item" *ngFor="let course of courses; let i=index" (click)="openDialog(course)">
-                    <camex-course-card [course]="course"></camex-course-card>
-                </div>
-            </owl-carousel>
+<section class="courser-container" *ngIf="vision">
+    <div class="options-container" >
+        <div class="title-container">
+                <h3 class="title">Cursos de capacitación</h3>
+                <span>Brindamos cursos de capacitación a nuestros afiliados y al público en general.</span>
         </div>
-      </div>
-      <div  *ngIf="vision" class="vertical-options no-select" fxHide [fxHide.gt-sm]="false">
-          <div class="see-more" (click)="next()" *ngIf="courses.length > 3">
-              <mat-icon>fast_forward</mat-icon>
-              <p>Ver mas</p>
-          </div>
-      </div>
-  </div>
+        <div class="options no-select"   *ngIf="courses.length > 4" fxHide.lt-sm>
+            <button mat-mini-fab color="primary" (click)="prev()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+            <div class="line"></div>
+            <button mat-mini-fab color="primary" (click)="next()">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="courses-section">
+        <div class="cards-container" [ngStyle.lt-md]="{'width':'100%'}">
+            <div>
+                <owl-carousel [options]="configuration" [items]="courses" [carouselClasses]="['owl-theme', 'row', 'sliding']" #owl>
+                    <div class="item" *ngFor="let course of courses; let i=index" (click)="openDialog(course)">
+                        <camex-course-card [course]="course"></camex-course-card>
+                    </div>
+                </owl-carousel>
+            </div>
+        </div>
+    </div>
 </section>
+<mat-spinner *ngIf="!vision" style="margin:40px auto"></mat-spinner>

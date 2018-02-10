@@ -6,26 +6,25 @@
 font-family: Roboto,"Helvetica Neue",sans-serif;
 text-rendering: optimizeLegibility;
 }
-body{
-    width: 100%;
-}
 *::-webkit-scrollbar-track
 {
-	background-color:rgba(0,0,0,0.1);
+    background-color:rgba(0,0,0,0.1);
+    z-index: 999;
 }
 
 *::-webkit-scrollbar
 {
     width: 10px;
     height: 10px;
-	background-color: #F5F5F5;
+    background-color: #F5F5F5;
 }
 
 *::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-	background-color: #555;
+    background-color: #555;
+    z-index: 999;
 }
 .no-select{
     -webkit-touch-callout: none; /* iOS Safari */
@@ -37,20 +36,21 @@ body{
                                   supported by Chrome and Opera */
 }
 button.my-button, a.my-button{
-    padding: 7px 25px;
+    padding: 5px 35px;
     font-size: 1.125rem;
     vertical-align: middle;
     font-weight: 300;
-    border-radius: 10px;
+    border-radius: 50px;
     color: white;
     overflow: hidden;
+    font-family: 'Lato', sans-serif;
 }
 
 .mat-dialog-container{
     padding: 0px!important;
 }
-.cdk-overlay-panel{
-    max-width: 100vw!important;
+.cdk-overlay-pane{
+    max-width: 95vw!important;
 }
 a:focus{
     outline: none;

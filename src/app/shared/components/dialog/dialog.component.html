@@ -3,7 +3,7 @@
     <mat-icon>close</mat-icon>
   </div>
   <div class="img" [style.background-image]="'url(' + data.url + ')'" [ngStyle.lt-sm]="{'height':'200px'}"></div>
-  <div class="container" [ngStyle.lt-sm]="{'padding':'10px'}">
+  <div class="container" [ngStyle.lt-sm]="{'padding':'10px','height':'calc(100vh - 280px)'}">
     <div class="header" fxLayout="row" fxLayout.lt-sm="column">
       <div class="left" [ngStyle.lt-sm]="{'width':'100%'}" fxLayout="column">
         <h2>{{data.titulo}}</h2>
@@ -43,7 +43,7 @@
         <button *ngIf="today < data.ultimo_registro" (click)="navigate(data.id)">Reservar un cupo</button>
         <ng-container *ngIf="today > data.ultimo_registro">
             <div class="alert no-select"><mat-icon>error</mat-icon> Este curso ya expiró</div>
-            <div class="reservar" (click)="navigate(data.id)">Realizar una reserva para futuras ediciones</div>
+            <div class="reservar" (click)="navigate(data.id)">Realizar una reserva para futuras versiones</div>
         </ng-container>
       </div>
     </div>

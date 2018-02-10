@@ -17,7 +17,10 @@ export class CoursesBarComponent implements OnInit, OnDestroy {
     margin: 15,
     loop: false,
     autoWidth: true,
-    dots: false
+    dots: false,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut',
+    fluidSpeed: true
   };
   subscription: Subscription;
   courses: Observable<any>;
@@ -25,6 +28,9 @@ export class CoursesBarComponent implements OnInit, OnDestroy {
   constructor(public dialog: MatDialog, private _events: EventsService) {}
   next() {
     this.owl.next();
+  }
+  prev() {
+    this.owl.previous();
   }
   ngOnInit() {
     this.subscription = this._events.getEvents().subscribe(

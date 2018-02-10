@@ -8,28 +8,6 @@ import { Router } from '@angular/router';
 })
 export class ToolBarComponent implements OnInit {
   @Output()smenu = new EventEmitter();
-  menu = [
-    {
-      title: 'Institucional',
-      firstLevel: [
-        {
-          title: 'Quienes Somos',
-          secondLevel: [
-            { title: 'Misión', url: '#' },
-            { title: 'Visión', url: '#' }
-          ]
-        }
-      ]
-    },
-    {
-      title: 'servicios',
-      firstLevel: [
-        { title: 'Centro Público', url: '#' },
-        { title: 'Guia Logística', url: '#' },
-        { title: 'Guia Comercio y Marketing', url: '#' }
-      ]
-    }
-  ];
   constructor(private _router: Router) { }
 
   ngOnInit() {

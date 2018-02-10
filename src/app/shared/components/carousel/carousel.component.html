@@ -1,24 +1,17 @@
-<!-- <div class="container" [ngStyle.lt-sm]="{'padding-top': '20px'}">
- <owl-carousel [options]="configuration" [items]="events" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-
-    <div class="item" *ngFor="let item of items;let i = index">
-      <div class="item no-select" [ngStyle.lt-sm]="{padding: '10px 30px 0px 30px'}">
-
-        <h2 [ngStyle.gt-sm]="{'font-size.rem': 3}">{{item.title}}</h2>
-        <h4>{{item.information}}</h4>
-
-
-      </div>
-    </div>
-
-  </owl-carousel> 
-</div> -->
 <section [ngStyle.lt-md]="{'padding':'80px 10px 40px 10px'}">
   <h1 class="no-select">CAMEX</h1>
-  <h2 class="no-select">Cámara de exportadores La Paz, es una entidad privada de carácter gremial.</h2>
-  <p class="no-select">Ofrece servicios de atención y asesoramiento a Empresas del Sector Exportador, organiza Ruedas de Negocios, Misiones a la Inversa, capacitaciones, trabaja en Programas de Comercialización de Productos al Exterior con diferentes Sectores y Empresas.</p>
+  <h2 class="no-select">Cámara de exportadores La Paz</h2>
+  <p class="no-select">Ofrece servicios de atención y asesoramiento a Empresas del Sector Exportador.</p>
+  <!-- <p class="no-select">Ofrece servicios de atención y asesoramiento a Empresas del Sector Exportador, organiza Ruedas de Negocios, Misiones a
+    la Inversa, capacitaciones, trabaja en Programas de Comercialización de Productos al Exterior con diferentes Sectores
+    y Empresas.</p> -->
 
   <!-- <button mat-raised-button class="my-button"><mat-icon>call</mat-icon> Contactate con nosotros</button> -->
-  <button mat-raised-button class="my-button"><mat-icon>visibility</mat-icon> Revista CAMEX</button>
-  <a href="https://www.facebook.com/camexbolivia" mat-raised-button class="my-button" color="primary">Facebook</a>
+    <div class="buttons-container">
+        <button mat-button class="my-button">
+            <img class="revista-img" src="../../../../assets/images/ee_icon.png" alt="Revista Exportaciones y Negocios">
+          <span>Revista Exportaciones y Negocios</span>
+        </button>
+        <a href="https://www.facebook.com/camexbolivia" mat-button class="my-button">Facebook</a>
+    </div>
 </section>

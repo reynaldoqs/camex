@@ -2,9 +2,8 @@
     display: block;
     width: 100%;
     box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
-    z-index: 999;
-    background-color: #fff;
-    
+    z-index: 998;
+    background-color: #272d39;
 }
 .camex-logo{
     position: relative;
@@ -14,7 +13,7 @@
     display: block;
     height: 50%;
     margin: 0 22px;
-    border-right: solid 1px rgba(20, 20, 20, .1);
+    border-right: solid 1px rgba(250, 250, 250, .4);
 }
 .revista-logo{
     position: relative;
@@ -49,22 +48,22 @@
     transition: .3s;
   }
   li:hover{
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(250, 250, 250, .2);
   }
-  li:last-child{
-    padding-right: 5px;  
-  }
+
    li > a{
     text-decoration: none;
-    font-size: 15px;
+    font-size: .95rem;
     transition: .3s;
     cursor: pointer;
-    color: #686868;
+    color: #f1f1f1;
     font-weight: 300;
+    letter-spacing: .3px;
+    font-family: 'Lato', sans-serif;
     
 }
   li:hover > a {
-    color:  #304FFE;
+    color:  #fff;
 }
   *:focus{
       outline: none;
@@ -75,12 +74,12 @@
     font-weight: 400;
   }
   .my-item:hover {
-      color: #83ba3b;
+    color:  #000;
   }
   .sandwich-menu {
     padding: 13px 5px;
     box-sizing: border-box;
 }
   .sandwich-menu mat-icon{
-      color: #454545;
+      color: #f1f1f1;
   }

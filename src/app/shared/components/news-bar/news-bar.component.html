@@ -1,15 +1,26 @@
 <section class="events-container" [ngStyle.gt-sm]="{'padding': '20px 30px 20px 30px'}">
-  <div class="all-container">
-      <div class="title-container">
-          <h2>Noticias</h2>
-          <div class="see-more-events">
-              <span>Ver mas</span>
-          </div>
-      </div>
-      <owl-carousel [options]="configuration" [items]="events" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-          <div class="item" *ngFor="let event of events;let i = index">
+  <div class="all-container" *ngIf="vision">
+        <div class="options-container">
+                <div class="title-container">
+                        <h3 class="title">Noticias</h3>
+                        <span>Noticias relacionadas con el comercio internacional de boliviano.</span>
+                </div>
+                <div class="options no-select"   fxHide.lt-sm *ngIf="news.length > 4">
+                    <button mat-mini-fab color="primary" (click)="prev()">
+                        <mat-icon>keyboard_arrow_left</mat-icon>
+                    </button>
+                    <div class="line"></div>
+                    <button mat-mini-fab color="primary" (click)="next()">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div>
+      <owl-carousel [options]="configuration" [items]="news" [carouselClasses]="['owl-theme', 'row', 'sliding']" #owl>
+          <div class="item" *ngFor="let event of news;let i = index">
               <camex-news-card [event]="event"></camex-news-card>
           </div>
       </owl-carousel>
   </div>
+  <mat-spinner *ngIf="!vision" style="margin:40px auto"></mat-spinner>
 </section>
+

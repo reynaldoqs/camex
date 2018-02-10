@@ -1,0 +1,28 @@
+<header>
+  <div class="title">
+      <h1>Noticias</h1>
+
+  <!-- <div class="search-container">
+      <mat-icon>search</mat-icon>
+      <input type="text" placeholder="Buscar..." #txtsearch>
+    </div> -->
+  </div>
+
+</header>
+<section fxLayout="row" fxLayoutAlign="center" fxLayout.lt-sm="column" fxLayoutGap="20px">
+  <ng-container *ngIf="vision">
+    <mat-card class="example-card" *ngFor="let new of news" [ngStyle.lt-sm]="{'max-width':'100%'}">
+      <img mat-card-image src="{{new.imgUrl}}" alt="{{new.titulo}}">
+      <mat-card-content>
+        <h3>{{new.titulo}}</h3>
+        <p>
+          {{new.descripcion}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a href="{{new.url}}">ver mas</a>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  <mat-spinner *ngIf="!vision" style="margin:40px auto"></mat-spinner>
+</section>

@@ -1,15 +1,46 @@
-
-<section class="new-services">
-    <a class="service-container" (click)="navigate('services')">
-        <img src="../../../../assets/images/icon01.png" alt="">
-        <h3>Asesoramiento</h3>
-    </a>
-    <a class="service-container" (click)="navigate('services')">
-        <img src="../../../../assets/images/icon02.png" alt="">
-        <h3>Capacitación</h3>
-    </a>
-    <a class="service-container" (click)="navigate('services')">
-        <img src="../../../../assets/images/icon03.png" alt="">
-        <h3>Desarrollo empresarial</h3>
-    </a>
+<section class="new-services" fxLayout="row" fxLayout.lt-sm="column">
+    <div class="service-container" [ngStyle.lt-sm]="{'width':'100%', 'padding':'50px 10px 20px 10px'}">
+        <div class="service-card">
+            <div class="img-container">
+                <img src="../../../../assets/images/service1.jpg" alt="" [ngStyle.lt-sm]="{'width':'100px', 'height':'100px'}">
+            </div>
+            <div class="service-information">
+                <h3>Asesoramiento</h3>
+                <p [ngStyle.lt-sm]="{'font-size':'.9rem'}">
+                    CAMEX cuenta con un Centro Publico integral de servicios especializados y orientados al crecimiento y diversificación de
+                    sus actividades empresariales y Gestión de exportación Asesoramiento Empresarial, Asesoramiento en logística
+                    y Procedimientos de exportación orientado al sector.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="service-container" [ngStyle.lt-sm]="{'width':'100%', 'padding':'50px 10px 20px 10px'}">
+        <div class="service-card center">
+            <div class="img-container">
+                <img class="center" src="../../../../assets/images/service2.jpg" alt="" [ngStyle.lt-sm]="{'width':'100px', 'height':'100px'}">
+            </div>
+            <div class="service-information">
+                <h3 class="center">Capacitación</h3>
+                <p class="center">
+                    Contamos con varios programas de Capacitación, a fin de apropiar las capacidades para el adecuado desempeño del Equipo Humano
+                    de una entidad, trabajo eficiente y desarrollo personal, de manera que facilite el logro de los objetivos
+                    definidos por cargo, área o proceso.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="service-container" [ngStyle.lt-sm]="{'width':'100%', 'padding':'50px 10px 20px 10px'}">
+        <div class="service-card">
+            <div class="img-container">
+                <img src="../../../../assets/images/service3.jpg" alt="" [ngStyle.lt-sm]="{'width':'100px', 'height':'100px'}">
+            </div>
+            <div class="service-information">
+                <h3>Desarrollo empresarial</h3>
+                <p class="ajuste">
+                    Brindamos Orientación acerca del medio y forma en la que una empresa y su personal puedan optimizar todos sus recursos, la
+                    innovación de productos, y demás procesos para que la empresa crezca con el fin de internacionalizarse.
+                </p>
+            </div>
+        </div>
+    </div>
 </section>

@@ -16,8 +16,28 @@
         </ul>
   </mat-sidenav>
 
-  <mat-sidenav-content [ngStyle.lt-md]="{'padding-top':'54px'}">
+<mat-sidenav-content [ngStyle.lt-md]="{'padding-top':'54px'}">
     <camex-tool-bar (smenu)="sidenav.open()"></camex-tool-bar>
     <router-outlet></router-outlet>
+    <camex-footer></camex-footer>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> 
+<!--
+<camex-tool-bar (smenu)="expression = !expression"></camex-tool-bar>
+<div class="s-menu-container" [hidden]="!expression">
+    <ul>
+        <li class="title">
+            <a routerLink="/" (click)="expression = false">Inicio</a>
+        </li>
+        <li class="title">¿Quienes somos?</li>
+        <li class="item"> <a routerLink="/about" (click)="expression = false">Misión</a></li>
+        <li class="item"> <a routerLink="/about" (click)="expression = false">Visión</a></li>
+        <li class="title">Información</li>
+        <li class="item"><a href="">Guia Empresarial</a></li>
+        <li class="item"><a href="">Oferta exportable</a></li>
+        <li class="item"><a routerLink="/cronograma" (click)="expression = false">Cronograma</a></li>
+        <li class="item"><a routerLink="/noticias" (click)="expression = false">Noticias</a></li>
+    </ul>
+</div>
+<router-outlet></router-outlet>
+<camex-footer></camex-footer> -->

@@ -23,11 +23,6 @@
           <mat-icon class="serv-icon">arrow_drop_down</mat-icon>
         </a>
       </li>
-      <li (click)="navigate('services')">
-        <a>
-          Servicios
-        </a>
-      </li>
       <li [matMenuTriggerFor]="informacion">
         <a>Información
           <mat-icon class="serv-icon">arrow_drop_down</mat-icon>
@@ -57,8 +52,8 @@
   <mat-menu #informacion="matMenu" [overlapTrigger]="false" #inst>
     <a href="#" mat-menu-item class="my-item">Guía Empresarial</a>
     <a href="#" mat-menu-item class="my-item">Oferta Exportable</a>
-    <a href="#" mat-menu-item class="my-item">Cronograma</a>
-    <a href="#" mat-menu-item class="my-item">Noticias</a>
+    <a (click)="navigate('cronograma')" mat-menu-item class="my-item">Cronograma</a>
+    <a (click)="navigate('noticias')" mat-menu-item class="my-item">Noticias</a>
   </mat-menu>
 
   <!-- end menu options-->

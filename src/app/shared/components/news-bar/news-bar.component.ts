@@ -1,11 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { Observable } from 'rxjs/Observable';
+import { NoticiasService } from '../../../services/events/noticias.service';
+import { OwlCarousel } from 'ngx-owl-carousel';
 
 @Component({
   selector: 'camex-news-bar',
   templateUrl: './news-bar.component.html',
   styleUrls: ['./news-bar.component.css']
 })
-export class NewsBarComponent implements OnInit {
+export class NewsBarComponent implements OnInit, OnDestroy {
+  @ViewChild('owl')owl: OwlCarousel;
   configuration: any = {
     dots: false,
     navigation: false,
@@ -26,68 +31,24 @@ export class NewsBarComponent implements OnInit {
       }
     }
   };
-  classOne = {
-    color: 'red',
-    'background-color': 'orange',
-    display: 'inline-flex'
-  };
-  events: any = [
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description: 'Este encuentro se realizara el dia lunes en aqui',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev01'
-    },
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description: 'Este encuentro se realizara el dia lunes en aqui',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev02'
-    },
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description: 'Este encuentro se realizara el dia lunes en aqui',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev03'
-    },
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description:
-        'Este encuentro se realizara el dia lunes en aqui y nose que vamos a hacer',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev04'
-    },
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description:
-        'Este encuentro se realizara el dia lunes en aqui y muchos de nosotros no sabemos que hacer con uestro tiempo y solo la pasamos diseñando webs y que mas podemos hacer si no tenemos recursos',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev05'
-    },
-    {
-      key: '01',
-      title: 'Ecuentro de profesores',
-      description: 'Este encuentro se realizara el dia lunes en aqui',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev06'
-    },
-    {
-      key: '01',
-      title:
-        'Ecuentro de profesores que nos que vamos a hacer perl o msnoa a hacer',
-      description: 'Este encuentro se realizara el dia lunes en aqui',
-      imgUrl:
-        'https://api.adorable.io/avatar/190/ev07'
-    }
-  ];
-  constructor() { }
+  subscription: Subscription;
+  news: Observable<any>;
+  vision: boolean;
+  constructor(private _noticias: NoticiasService) { }
 
   ngOnInit() {
+    this.subscription = this._noticias.getNoticias().subscribe( data => {
+      this.news = data;
+      this.vision = true;
+    });
   }
-
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+  next() {
+    this.owl.next();
+  }
+  prev() {
+    this.owl.previous();
+  }
 }

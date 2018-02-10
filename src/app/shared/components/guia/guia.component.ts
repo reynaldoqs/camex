@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
     <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, animi excepturi at officia nemo nisi quas aut quasi odio.
     </p>
-    <button class="my-button" mat-raised-button (click)="navigate()">Consultar guia empresarial</button>
+    <button class="my-button" mat-raised-button (click)="navigate()" color="primary">Consultar guia empresarial</button>
   `,
   styleUrls: ['./guia.component.css']
 })

@@ -1,25 +1,33 @@
-<section class="contact" [ngStyle.gt-sm]="{'padding': '25px 60px 25px 60px' }">
+<section class="contact" [ngStyle.gt-sm]="{'padding': '25px 40px 25px 40px' }">
   <div class="all-container">
-    <div class="contact-dates" fxLayout="row" fxLayoutAlign="space-between center">
-      <h4 [ngStyle.lt-sm]="{'font-size.px':14}">¿Necesitas más información?</h4>
+    <div class="contact-dates" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-sm="column">
+      <div class="title">
+        <h4 [ngStyle.lt-sm]="{'font-size.px':20}">¿Necesitas más información?</h4>
+      </div>
       <div class="telf">
-        <mat-icon>phone</mat-icon>
-        <span>+591 7263212</span>
+        <div class="icon">
+            <mat-icon>phone</mat-icon>
+        </div>
+        <p class="icon-title">+591 (2) 2442832</p>
       </div>
-      <div class="mail" fxHide.lt-sm>
+      <div class="mail">
+        <div class="icon">
         <mat-icon>mail</mat-icon>
-        <span>camexBolivia@Bolivia.com</span>
       </div>
-      <div class="location" fxHide.lt-sm>
+        <p class="icon-title">camexBolivia@Bolivia.com</p>
+      </div>
+      <div class="location">
+        <div class="icon">
         <mat-icon>place</mat-icon>
-        <span>Av. Arce esq. Goitia #2021</span>
+      </div>
+        <p class="icon-title">Av. Arce esq. Goitia # 2021, La Paz</p>
       </div>
     </div>
   </div>
 </section>
 <footer [ngStyle.gt-sm]="{'padding': '50px 80px 50px 80px' }">
   <div class="all-container">
-    <div class="camex-footer" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="60px">
+    <div class="camex-footer" fxLayout="row"  fxLayoutAlign="space-around start" fxLayout.lt-sm="column" fxLayoutGap="20px">
       <div class="links">
         <h4>Link de interés</h4>
         <ul>
@@ -68,5 +76,8 @@
   </div>
 </footer>
 <div class="yoteapoyo-footer">
-  <small>Diseño y desarrollo @AuD</small>
+  <div class="aud-container">
+      <img src="../../../../assets/images/AUD_logo.png" alt="">
+      <p>Diseño y desarrollo de sistemas</p>
+  </div>
 </div>

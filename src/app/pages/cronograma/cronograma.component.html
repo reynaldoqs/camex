@@ -1,0 +1,40 @@
+<header>
+  <div class="title">
+    <h1>Cronograma</h1>
+
+    <!-- <div class="search-container">
+        <mat-icon>search</mat-icon>
+        <input type="text" placeholder="Buscar..." #txtsearch>
+      </div> -->
+  </div>
+
+</header>
+<div *ngIf="vision" class="main-container">
+  <section *ngFor="let event of events">
+    <div class="line-container" fxHide.lt-sm>
+      <div class="line">
+        <div class="circle"></div>
+      </div>
+    </div>
+    <div class="container" [ngStyle.lt-sm]="{'width':'100%'}">
+      <div class="event-card">
+        <div class="left">
+          <h4>{{event.fechas[0] | date:'dd'}}</h4>
+          <span>{{event.fechas[0] | date:'MMMM'}}</span>
+        </div>
+        <div class="mid">
+          <h3>{{event.titulo}}
+            <span> {{event.tipo}}</span>
+          </h3>
+          <p>{{event.descripcion}}</p>
+        </div>
+        <div class="right">
+          <button mat-mini-fab color="primary" (click)="navigate(event.id)">
+            <mat-icon aria-label="Ver detalles del evento">arrow_forward</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<mat-spinner *ngIf="!vision" style="margin:40px auto"></mat-spinner>

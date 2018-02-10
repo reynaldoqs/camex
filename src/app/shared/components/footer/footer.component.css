@@ -6,8 +6,8 @@
     width: 100%;
     padding: 20px 15px 20px 10px;
     box-sizing: border-box;
-    background-color: #373737;
-    border-bottom: 1px rgba(200, 200, 200, .1) solid;
+    background-color: #009cde;
+    background-image: radial-gradient(circle farthest-side at center bottom,#009cde,#003087 125%);
 }
 .contact h4{
     color: white;
@@ -22,11 +22,34 @@
     color: white;
 }
 .contact-dates > div {
-    display: flex;
-    align-items: center;
+    text-align: center;
 }
-.contact-dates > div > mat-icon{
-    color: rgb(223, 230, 177);
+.title h4{
+    font-weight: 300;
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif; 
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border: solid 1px #c6c6c6;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.icon-title{
+    margin: 10px 0px;
+    color: #f1f1f1;
+    font-weight: 300;
+    font-size: 14px;
+}
+.icon > mat-icon{
+    color: #c6c6c6;
 }
 .contact-dates > div > span{
     font-size: 12px;
@@ -39,7 +62,7 @@
 }
 footer{
     width: 100%;
-    background-color: #373737;
+    background-color: #eee;
     padding: 30px 30px 30px 30px;
     box-sizing: border-box;
 }
@@ -47,19 +70,20 @@ footer{
     width: 100%;
 }
 .camex-footer h4{
-    color: #c6c6c6;
-    text-transform: uppercase;
-    font-size: 16px;
+    color: #454545;
+    font-size: 18px;
     font-family: 'Fjalla One', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: .8px;
     margin-bottom: 10px;
     margin-top: 8px;
+    letter-spacing: -.5px;
 }
 .camex-footer a{
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     color: #9f9f9f;
+    font-weight: 300;
 }
 .camex-footer ul {
     list-style: none;
@@ -67,6 +91,9 @@ footer{
 .camex-footer li{
     padding: 5px 2px;
     box-sizing: border-box;
+}
+.camex-footer li:hover{
+    text-decoration: underline;
 }
 .social{
     display: inline-block;
@@ -94,11 +121,19 @@ footer{
     padding: 10px 20px 10px 20px;
     box-sizing: border-box;
     border-top: 1px rgba(200, 200, 200, .1) solid;
+    background-color: #eee;
+    height: 180px;
     display: flex;
-    justify-content: flex-end;
-    background-color: #373737;
+    justify-content: center;
 }
-.yoteapoyo-footer > small {
-    font-size: 12px;
-    color: #515151;
+.aud-container img{
+    margin: 10px 0px;
+}
+.aud-container{
+    text-align: center;
+}
+.aud-container p{
+    font-size: 13px;
+    font-weight: 200;
+    color: #000;
 }

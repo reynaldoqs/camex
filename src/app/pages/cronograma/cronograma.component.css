@@ -1,12 +1,73 @@
-
-:host{
+header{
+    background-image: url(../../../assets/images/camex_bg.jpg);
+    background-size: cover;
+    text-align: center;
+    width: 100%;
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-section{
+.main-container {
+    max-width: 1300px;
+    margin: 20px auto;
+}
+h1{
+    font-size: 48px;
+    line-height: 38px;
+    font-weight: 900;
+    margin: 10px auto 14px auto;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    color: white;
+}
+.example-card {
+    max-width: 220px;
+  }
+.title{
+    padding: 30px 0px 30px 0px;
+}
+.search-container{
+    margin: 30px auto;
+    height: 45px;
+    width: 320px;
+    max-width: 100%;
+    border: solid 1px white;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color: white;
+    padding: 5px 5px;
+}
+.search-container mat-icon{
+    position: relative;
+    top: 6px;
+}
+.search-container input[type="search"]{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: calc( 100% - 40px);
+}
+.search-container input[type="search"]:focus{
+    outline: none;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: white;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: white;
+  }
+
+  /**News bar**/
+  section{
     width: 100%;
-    height: 70px;
+    height: 90px;
     display: inline-flex;
 }
 .line-container{
@@ -69,12 +130,10 @@ section:last-child .line-container{
     box-sizing: border-box;
 }
 .left{
-    padding: 5px;
+    padding: 15px 0 10px 0;
     box-sizing: border-box;
     color: #000;
     text-align: center;
-    background-color: #fff;
-    padding-bottom: 8px;
 }
 .right{
     display: flex;
@@ -97,14 +156,14 @@ section:last-child .line-container{
 .mid{
     width: calc(100% - 100px);
     height: 100%;
-    padding: 2px 0;
+    padding: 12px 0;
     box-sizing: border-box;
     padding-left: 7px;
 }
 .mid h3{
     font-size: 1rem;
     font-weight: 400;
-    color: #f9f9f9;
+    color: #191919;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -123,7 +182,7 @@ section:last-child .line-container{
 }
 .mid p{
     font-size: 14px;
-    color: #fff;
+    color: #1f1f1f;
     font-weight: 300;
     width: 100%;
     overflow: hidden;
