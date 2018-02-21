@@ -54,7 +54,7 @@ button{
 button span{
     font-size: .87rem;
 }
-a{
+a.facebook{
     margin: 15px 10px;
     font-weight: 500;
     background-color: #0D47A1;

@@ -1,12 +1,13 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyAlj25XhkrhHIu_IlUO3n2iwzttALbOD5U',
-    authDomain: 'camex-web.firebaseapp.com',
-    databaseURL: 'https://camex-web.firebaseio.com',
-    projectId: 'camex-web',
-    storageBucket: 'camex-web.appspot.com',
-    messagingSenderId: '882993553217'
+    apiKey: 'AIzaSyAVos7XxbgUj4reeRhRjbySAOIjSSJbLwU',
+    authDomain: 'camex-bolivia.firebaseapp.com',
+    databaseURL: 'https://camex-bolivia.firebaseio.com',
+    projectId: 'camex-bolivia',
+    storageBucket: 'camex-bolivia.appspot.com',
+    messagingSenderId: '295971204260'
+
   }
 
 };

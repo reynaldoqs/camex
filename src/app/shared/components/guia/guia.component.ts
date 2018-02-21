@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   template: `
     <h3>Guia Empresarial</h3>
     <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, animi excepturi at officia nemo nisi quas aut quasi odio.
+    El papel de la CAMEX en el ámbito exportador es vital y de gran importancia pues es la entidad que cuida y vela por los intereses de los exportadores.
     </p>
     <button class="my-button" mat-raised-button (click)="navigate()" color="primary">Consultar guia empresarial</button>
   `,

@@ -52,10 +52,10 @@ export class SeoService {
         property: 'og:description',
         content: data.descripcion
       },
-      {
+     /* {
         property: 'og:image',
         content: data.imagen
-      }
+      }*/
     ];
     if (!this.metaService.getTags('property')) {
       this.metaService.addTags(newTags);
